@@ -1,0 +1,174 @@
+/* =========================================
+   LIGHT GARDEN - 야간 별빛 축제 웹사이트
+   CSS를 섹션별로 나누어 관리합니다.
+========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root{--night:#100b35;--deep:#1b1054;--violet:#7849d5;--lavender:#c5a6ff;--gold:#ffe6a0;--cyan:#8cecff;--white:#fffaff;--muted:#b8add8}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--night);color:var(--white);font-family:'Manrope','Pretendard',sans-serif}
+a{color:inherit;text-decoration:none}
+button,input,select{font:inherit}
+button{cursor:pointer}
+.header{height:78px;padding:0 6vw;display:flex;align-items:center;justify-content:space-between;background:#100b35;color:white;position:relative;z-index:20;border-bottom:1px solid #ffffff18}
+.logo{font-family:'Cormorant Garamond',serif;font-size:25px;font-weight:700;letter-spacing:1px;white-space:nowrap}
+.logo span{font-weight:400;margin-left:5px}
+.logo i{font-style:normal;color:var(--gold);font-size:14px;vertical-align:top;margin-left:5px}
+.nav{display:flex;gap:clamp(18px,3vw,42px);margin-left:auto;margin-right:36px}
+.nav a,.reserve-link{font-size:9px;font-weight:800;letter-spacing:1.5px}
+.nav a{color:#d9d0f1;transition:color .2s}
+.nav a:hover{color:var(--gold)}
+.reserve-link{border:1px solid #d8c0ff;padding:12px 17px;color:#f5e9ff}
+.reserve-link span{color:var(--gold);margin-left:8px}
+.menu-toggle{display:none;border:0;background:none;color:white;font-size:24px}
+.hero{height:min(820px,calc(100vh - 78px));min-height:670px;position:relative;overflow:hidden;display:flex;align-items:center;background:#1b1054}
+.hero-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 55%}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(13,7,49,.68),rgba(18,8,65,.25) 58%,rgba(15,7,55,.08)),linear-gradient(0deg,rgba(12,7,43,.55),transparent 45%)}
+.hero-topline{position:absolute;top:32px;left:6vw;right:6vw;z-index:2;display:flex;justify-content:space-between;font-size:9px;letter-spacing:2px;color:#f3eaff}
+.hero-copy{position:relative;z-index:2;margin-left:10vw;margin-top:25px;max-width:670px}
+.hero-kicker,.mini-title,.section-label{font-size:9px;letter-spacing:2.5px;font-weight:800;color:var(--gold)}
+.hero-copy h1{font-family:'Cormorant Garamond',serif;font-size:clamp(90px,15vw,190px);line-height:.68;letter-spacing:-5px;font-weight:500;margin:25px 0 20px;text-shadow:0 8px 35px #160c4c88}
+.hero-copy h1 em{font-style:normal;color:#e6d6ff}
+.hero-sub{font-family:'Cormorant Garamond',serif;font-size:21px;letter-spacing:5px;margin:30px 0 12px}
+.hero-desc{font-size:12px;line-height:2;color:#e7ddff}
+.primary-btn{display:inline-flex;align-items:center;justify-content:center;gap:30px;background:linear-gradient(100deg,#ffe8a7,#d9b7ff 55%,#9cecff);color:#1b1046;padding:16px 22px;font-size:9px;font-weight:900;letter-spacing:1.2px;border:0;box-shadow:0 0 28px #c3a0ff40;transition:transform .2s,box-shadow .2s}
+.primary-btn:hover{transform:translateY(-3px);box-shadow:0 10px 32px #b99aff70}
+.hero-copy .primary-btn{margin-top:22px}
+.hero-date{position:absolute;right:7vw;bottom:55px;z-index:2;display:flex;flex-direction:column;text-align:right;gap:5px}
+.hero-date strong{font-family:'Cormorant Garamond',serif;font-size:29px;font-weight:500;color:var(--gold)}
+.hero-date span{font-size:9px;letter-spacing:2px}
+.scroll-cue{position:absolute;left:6vw;bottom:58px;z-index:2;display:flex;align-items:center;gap:12px;font-size:8px;letter-spacing:2px}
+.scroll-cue span{height:36px;width:1px;background:linear-gradient(var(--gold),transparent)}
+.hero-sparkle{position:absolute;z-index:2;color:#fff3c7;text-shadow:0 0 18px white}
+.sparkle-one{top:22%;right:18%;font-size:30px}.sparkle-two{top:37%;right:10%;font-size:24px}
+.glow-marquee{overflow:hidden;background:#d9c0ff;color:#24104c;padding:13px 0;white-space:nowrap;font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:700;letter-spacing:2px}
+.glow-marquee div{width:max-content;animation:marquee 28s linear infinite}
+@keyframes marquee{to{transform:translateX(-40%)}}
+.section{width:min(1160px,88vw);margin:auto}
+.about{padding-top:115px;padding-bottom:120px}
+.about-layout{display:grid;grid-template-columns:1fr .85fr;gap:9vw;align-items:end;margin-top:28px}
+.about h2,.section-heading h2,.night-stage h2,.schedule-banner h2,.reservation-form-wrap h2{font-family:'Cormorant Garamond',serif;font-size:clamp(62px,8vw,108px);line-height:.83;font-weight:500;letter-spacing:-2px;margin:0}
+.about h2 span,.section-heading h2 span,.night-stage h2 span,.schedule-banner h2 span,.reservation-form-wrap h2 span{color:#d7bdff}
+.mini-title{color:#c6aaff;margin:0 0 18px}
+.about-description{max-width:440px;color:#bcb2d7;font-size:12px;line-height:2}
+.about-description .lead{font-size:16px;color:#fff;font-weight:700}
+.event-facts{margin-top:28px;border-top:1px solid #ffffff2a}
+.event-facts div{display:flex;justify-content:space-between;gap:15px;padding:12px 0;border-bottom:1px solid #ffffff20;font-size:10px}
+.event-facts span{color:var(--gold);letter-spacing:1px;font-weight:800}
+.event-facts b{font-weight:600;text-align:right}.event-facts small{color:#a99bc9;font-weight:400}
+.exhibition{padding-top:100px;padding-bottom:110px}
+.section-heading{display:flex;align-items:end;justify-content:space-between;gap:25px;margin:28px 0 44px}
+.section-heading h2{font-size:clamp(60px,7vw,96px)}
+.section-heading h2 span{color:#b99bff}
+.section-heading>p{color:#bcb2d7;font-size:11px;line-height:1.9;margin-bottom:5px}
+.exhibit-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:17px;align-items:end}
+.exhibit-card{min-width:0}
+.exhibit-visual{height:290px;position:relative;overflow:hidden;display:flex;align-items:end;padding:22px;isolation:isolate}
+.exhibit-large .exhibit-visual{height:370px}
+.exhibit-visual:before,.exhibit-visual:after{content:"";position:absolute;z-index:-1;border-radius:50%}
+.visual-castle{background:radial-gradient(circle at 50% 40%,#ffe6a6,#a47be8 42%,#27136c 78%)}
+.visual-castle:before{width:230px;height:230px;border:2px solid #fff1bd;top:28px;left:50%;transform:translateX(-50%);box-shadow:0 0 0 18px #ffffff15,0 0 0 38px #ffffff0b}
+.visual-forest{background:radial-gradient(ellipse at 50% 100%,#42cfc4,#25417c 48%,#1b1054)}
+.visual-forest:before{width:190px;height:260px;background:linear-gradient(90deg,#7be6d5,#b79aff);border-radius:100% 0 100% 0;top:20px;left:25%;transform:rotate(25deg);opacity:.6}
+.visual-crystal{background:linear-gradient(145deg,#3b2a8c,#a15ce2 52%,#65c9e6)}
+.visual-crystal:before{width:150px;height:190px;border:24px solid #b8f3ff;transform:rotate(45deg);top:25px;right:20px;opacity:.55}
+.visual-crystal:after{width:95px;height:150px;border:15px solid #ffe6a6;transform:rotate(45deg);top:70px;left:35px;opacity:.65}
+.exhibit-visual b{font-family:'Cormorant Garamond',serif;font-size:43px;line-height:.8;letter-spacing:1px;text-shadow:0 4px 20px #1b104b}
+.visual-number{position:absolute;top:17px;left:20px;font-size:9px;letter-spacing:2px;color:#fff4c9}
+.exhibit-visual i{position:absolute;top:20px;right:25px;color:#fff2c0;font-style:normal;font-size:28px}
+.exhibit-info{display:flex;justify-content:space-between;gap:10px;padding-top:15px}
+.exhibit-info h3{font-size:13px;margin:0 0 5px}.exhibit-info p,.exhibit-info>span{font-size:9px;color:#aaa0c7;margin:0;line-height:1.7}.exhibit-info>span{white-space:nowrap}
+.outline-btn{margin-top:35px;background:transparent;color:white;border:1px solid #9e8ac9;padding:14px 20px;font-size:10px;font-weight:800;letter-spacing:1px}
+.outline-btn span{margin-left:22px;color:var(--gold)}
+.night-stage{height:510px;position:relative;overflow:hidden;display:flex;align-items:center}
+.night-stage>img{position:absolute;width:100%;height:100%;object-fit:cover;object-position:center 55%}
+.night-stage-shade{position:absolute;inset:0;background:linear-gradient(90deg,#100b35ed,#100b3570 65%,#100b3530)}
+.night-stage-content{position:relative;margin-left:10vw}
+.night-stage h2{font-size:clamp(58px,8vw,100px);margin:22px 0}
+.night-stage h2 span{color:var(--gold)}
+.night-stage-content>p:last-child{font-size:11px;line-height:2;color:#e0d5fa}
+.program{padding-top:110px;padding-bottom:115px}
+.program-list{border-top:1px solid #ffffff35}
+.program-row{display:grid;grid-template-columns:110px 1fr auto;gap:20px;align-items:center;padding:23px 12px;border-bottom:1px solid #ffffff24}
+.program-row time{font-family:'Cormorant Garamond',serif;font-size:27px;color:var(--gold)}
+.program-row div{display:flex;flex-direction:column;gap:6px}.program-row b{font-size:12px;letter-spacing:1px}.program-row span{font-size:10px;color:#afa4cb}
+.program-row i{font-size:8px;color:#d5c2ff;font-style:normal;letter-spacing:1.5px}
+.photo-zone{padding-top:35px;padding-bottom:120px}
+.photo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.photo-card{height:300px;position:relative;overflow:hidden;padding:22px;display:flex;flex-direction:column;justify-content:end;box-shadow:inset 0 -100px 80px #100b3580}
+.photo-card:before{content:"";position:absolute;inset:0;z-index:-1;transition:transform .5s}
+.photo-card:hover:before{transform:scale(1.06)}
+.photo-card span{font-size:8px;letter-spacing:2px;color:#fff0c7}.photo-card b{font:500 43px/.8 'Cormorant Garamond',serif;margin:12px 0}.photo-card small{font-size:10px;color:#e4d9ff}
+.photo-arch:before{background:radial-gradient(ellipse at 50% 42%,#ffdf9a 0 8%,#b68cff 9% 10%,transparent 11%),linear-gradient(145deg,#21125e,#a05be1 55%,#55c8d8)}
+.photo-star:before{background:radial-gradient(circle at 50% 35%,#fff3b6 0 3%,#f6b5ff 4% 8%,transparent 9%),radial-gradient(ellipse at 50% 80%,#57cce6,#5132a1 65%)}
+.photo-lake:before{background:radial-gradient(ellipse at 50% 80%,#d3aaff,#4b2b99 40%,#101b57 80%)}
+.schedule-banner{padding:85px 6vw;background:linear-gradient(115deg,#29145f,#5535a0 55%,#167b9a);position:relative;overflow:hidden}
+.schedule-banner:after{content:"✧  ✦  ✧";position:absolute;right:7%;top:18%;font-size:100px;color:#fff4c0;opacity:.45;letter-spacing:18px}
+.schedule-banner-inner{width:min(1160px,100%);margin:auto;display:flex;justify-content:space-between;align-items:center;gap:25px;position:relative;z-index:1}
+.schedule-banner h2{font-size:clamp(60px,8vw,100px);margin:24px 0}.schedule-banner h2 span{color:var(--gold)}
+.schedule-banner-inner>div>p:last-child{font-size:11px;line-height:2;color:#e7dcff}
+.guide{padding-top:110px;padding-bottom:120px}
+.guide-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.guide-grid article{border-top:1px solid #ffffff55;padding:20px 15px 15px 0}
+.guide-grid article>span{color:var(--gold);font-size:10px;font-weight:800}
+.guide-grid h3{font:600 24px 'Cormorant Garamond',serif;letter-spacing:1px;margin:23px 0 10px}
+.guide-grid p{font-size:10px;line-height:1.9;color:#b8add8}
+.footer{background:#090622;border-top:1px solid #ffffff1c;padding:34px 6vw;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.footer p{font-size:8px;line-height:1.9;letter-spacing:1.5px;color:#a99cc7}
+.footer small{font-size:8px;color:#80769d;letter-spacing:1px}
+
+/* 일정/프로그램 팝업 */
+.modal{display:none;position:fixed;inset:0;z-index:100;align-items:center;justify-content:center;padding:20px}
+.modal.open{display:flex}
+.modal-backdrop{position:absolute;inset:0;background:#08041bdc;backdrop-filter:blur(8px)}
+.modal-box{position:relative;background:#171044;border:1px solid #c6a6ff66;width:min(680px,100%);max-height:85vh;overflow:auto;padding:42px;box-shadow:0 20px 80px #0008}
+.modal-close{position:absolute;right:18px;top:12px;border:0;background:none;color:white;font-size:32px}
+.modal-box h2{font:500 48px 'Cormorant Garamond',serif;margin:18px 0 25px;color:#e2d0ff}
+.modal-subhead{color:var(--gold);font-size:10px;letter-spacing:2px;font-weight:800;margin:24px 0 8px;padding-bottom:10px;border-bottom:1px solid #c4a6ff66}
+.modal-row{display:grid;grid-template-columns:75px 1fr auto;gap:14px;padding:13px 0;border-bottom:1px solid #ffffff1b;font-size:11px}
+.modal-row time{color:var(--gold);font-weight:800}.modal-row small{color:#b9add6}
+
+/* 사전예약 페이지 */
+.reservation-page{background:#110b38}
+.reservation-layout{display:grid;grid-template-columns:1fr 1fr;min-height:calc(100vh - 78px)}
+.reservation-art{position:relative;min-height:760px;overflow:hidden}
+.reservation-art img{position:absolute;width:100%;height:100%;object-fit:cover}
+.reservation-art:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#10072ee8,transparent 85%)}
+.reservation-art-copy{position:absolute;z-index:1;left:9%;bottom:9%}
+.reservation-art-copy p{color:var(--gold);font-size:9px;letter-spacing:2px;font-weight:800}
+.reservation-art-copy h1{font:500 clamp(65px,8vw,110px)/.8 'Cormorant Garamond',serif;margin:20px 0}
+.reservation-art-copy h1 em{font-style:normal;color:#d8c1ff}
+.reservation-art-copy span{font-size:9px;letter-spacing:2px}
+.reservation-form-wrap{width:min(490px,82%);margin:auto;padding:70px 0}
+.reservation-form-wrap h2{font-size:clamp(58px,6vw,82px);margin:23px 0}
+.reservation-form-wrap h2 span{color:#d4b8ff}
+.form-desc{font-size:10px;line-height:1.9;color:#b8add8;margin-bottom:28px}
+#reservationForm{display:flex;flex-direction:column}
+#reservationForm>label:not(.agree){font-size:10px;font-weight:800;margin:15px 0 7px}
+#reservationForm em{font-style:normal;color:#ffb8d7}
+#reservationForm input:not([type=checkbox]),#reservationForm select{height:46px;padding:0 12px;color:#fff;background:#211750;border:1px solid #66528f;outline:none;font-size:11px}
+#reservationForm input:focus,#reservationForm select:focus{border-color:#d6baff;box-shadow:0 0 0 3px #d6baff20}
+#reservationForm select option{background:#211750}
+.agree{display:flex;align-items:center;gap:8px;font-size:9px;color:#c5b9dc;margin:23px 0}
+.agree input{accent-color:#c7a6ff}
+.submit-btn{width:100%}
+.complete{background:#211750;border:1px solid #9b7bcb;padding:30px;margin-top:25px;text-align:center}
+.complete>b{font-size:32px;color:var(--gold)}.complete h3{font:500 27px 'Cormorant Garamond',serif}.complete p{font-size:10px;line-height:1.9;color:#c5b9dc}
+@media(max-width:760px){
+ .header{height:68px;padding:0 5vw}.menu-toggle{display:block;order:3}.reserve-link{margin-left:auto;margin-right:14px;padding:10px 12px;font-size:8px}
+ .nav{display:none;position:absolute;top:68px;left:0;right:0;margin:0;padding:22px 6vw;background:#100b35;flex-direction:column;gap:20px}.nav.open{display:flex}
+ .hero{height:720px;min-height:650px}.hero-image{object-position:54% center}.hero-copy{margin-left:7vw;margin-top:40px}.hero-copy h1{font-size:clamp(90px,22vw,150px);letter-spacing:-3px}
+ .hero-topline{top:22px;font-size:7px}.hero-date{right:7vw;bottom:35px}.hero-date strong{font-size:23px}.scroll-cue{left:7vw;bottom:43px}
+ .about{padding-top:80px;padding-bottom:80px}.about-layout{grid-template-columns:1fr;gap:28px}.about h2,.section-heading h2{font-size:clamp(64px,17vw,90px)}
+ .exhibition,.program,.guide{padding-top:80px;padding-bottom:85px}.section-heading{align-items:start;flex-direction:column;gap:10px}
+ .exhibit-grid{grid-template-columns:1fr 1fr}.exhibit-large{grid-column:1/-1}.exhibit-large .exhibit-visual{height:300px}.exhibit-visual{height:220px;padding:14px}.exhibit-visual b{font-size:35px}.exhibit-info{flex-direction:column;gap:5px}
+ .night-stage{height:430px}.night-stage-content{margin-left:7vw}.night-stage h2{font-size:clamp(55px,14vw,78px)}
+ .program-row{grid-template-columns:65px 1fr;gap:12px;padding:18px 5px}.program-row time{font-size:23px}.program-row i{grid-column:2}
+ .photo-grid{grid-template-columns:1fr}.photo-card{height:240px}
+ .schedule-banner{padding:70px 7vw}.schedule-banner-inner{align-items:start;flex-direction:column}.schedule-banner h2{font-size:clamp(60px,15vw,86px)}.schedule-banner:after{font-size:60px;right:3%}
+ .guide-grid{grid-template-columns:1fr;gap:12px}.guide-grid article{padding:15px 0}.guide-grid h3{margin:12px 0 7px}
+ .footer{flex-wrap:wrap;padding:28px 6vw}.footer small{width:100%}
+ .modal-box{padding:32px 20px}.modal-box h2{font-size:39px}.modal-row{grid-template-columns:58px 1fr}.modal-row small{grid-column:2}
+ .reservation-layout{grid-template-columns:1fr}.reservation-art{min-height:370px}.reservation-art-copy h1{font-size:72px}.reservation-form-wrap{width:86%;padding:55px 0}
+}

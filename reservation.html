@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>사전예약 | LIGHT GARDEN</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/reservation.js" defer></script>
+</head>
+<body class="reservation-page">
+  <header class="header"><a class="logo" href="index.html">LIGHT<span>GARDEN</span><i>✦</i></a><a class="reserve-link" href="index.html">메인으로 돌아가기 ↗</a></header>
+  <main class="reservation-layout">
+    <section class="reservation-art">
+      <img src="assets/light-garden-hero.png" alt="별빛과 구름, 빛나는 성이 있는 환상의 야간 정원">
+      <div class="reservation-art-copy"><p>FOLLOW THE LIGHT</p><h1>YOUR<br>MAGIC<br><em>NIGHT.</em></h1><span>LIGHT GARDEN · 2027</span></div>
+    </section>
+    <section class="reservation-form-wrap">
+      <p class="section-label">LIGHT GARDEN / PRE-RESERVATION</p>
+      <h2>RESERVE<br><span>YOUR NIGHT.</span></h2>
+      <p class="form-desc">별빛 정원에서 만날 특별한 밤을 예약하세요.<br>본 신청 페이지는 수업 과제용 데모입니다.</p>
+      <form id="reservationForm">
+        <label for="visitorName">이름 <em>*</em></label><input id="visitorName" name="visitorName" type="text" placeholder="이름을 입력해 주세요" required>
+        <label for="visitorEmail">이메일 <em>*</em></label><input id="visitorEmail" name="visitorEmail" type="email" placeholder="example@email.com" required>
+        <label for="visitDate">방문 날짜 <em>*</em></label><select id="visitDate" name="visitDate" required><option value="">날짜를 선택해 주세요</option><option>2027.12.18 (토)</option><option>2027.12.19 (일)</option><option>2027.12.20 (월)</option><option>2027.12.24 (금)</option><option>2027.12.25 (토)</option><option>2027.12.31 (금)</option></select>
+        <label for="visitorCount">방문 인원 <em>*</em></label><select id="visitorCount" name="visitorCount" required><option>1명</option><option>2명</option><option>3명</option><option>4명</option><option>5명</option></select>
+        <label for="ticketKind">예약 유형</label><select id="ticketKind" name="ticketKind"><option>일반 입장권</option><option>가족 패키지</option><option>야간 공연 포함권</option></select>
+        <label class="agree"><input type="checkbox" required> 개인정보 수집 및 이용에 동의합니다. <em>*</em></label>
+        <button class="primary-btn submit-btn" type="submit">사전예약 완료하기 <span>↗</span></button>
+      </form>
+      <div class="complete" id="completeMessage" role="status" aria-live="polite" hidden><b>✦</b><h3>YOUR NIGHT IS RESERVED!</h3><p>사전예약 신청이 완료되었습니다.<br>이 화면은 과제용 데모이며 실제 예약은 접수되지 않습니다.</p><a class="primary-btn" href="index.html">메인으로 돌아가기 ↗</a></div>
+    </section>
+  </main>
+  <footer class="footer"><a class="logo" href="index.html">LIGHT<span>GARDEN</span><i>✦</i></a><small>© 2027 LIGHT GARDEN · CONCEPT PROJECT</small></footer>
+</body>
+</html>
